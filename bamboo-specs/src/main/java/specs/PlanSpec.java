@@ -106,10 +106,6 @@ public class PlanSpec {
                                 .whenRemovedFromRepositoryAfterDays(7)
                                 .whenInactiveInRepositoryAfterDays(30))
                         .notificationForCommitters()
-                        .branchIntegration(new BranchIntegration()
-                                .integrationBranch(new PlanBranchIdentifier(new BambooKey("MAIN"))
-                                        .oid(new BambooOid("1gmiu24fqwpoh")))
-                                .pushOnSuccessfulBuild(true))
                         .issueLinkingEnabled(false));
         return plan;
     }
